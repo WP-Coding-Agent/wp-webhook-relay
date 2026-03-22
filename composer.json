@@ -5,6 +5,7 @@
   "license": "GPL-2.0-or-later",
   "require": { "php": ">=8.0" },
   "autoload": { "psr-4": { "WebhookRelay\\": "src/" } },
+  "autoload-dev": { "psr-4": { "WebhookRelay\\Tests\\": "tests/" } },
   "require-dev": {
     "phpunit/phpunit": "^9.6",
     "yoast/phpunit-polyfills": "^2.0"

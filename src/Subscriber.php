@@ -94,7 +94,7 @@ final class Subscriber
         foreach ($items as &$item) {
             $item['id']     = (int) $item['id'];
             $item['active'] = (bool) $item['active'];
-            $item['events'] = json_decode($item['events'], true);
+            $item['events'] = json_decode($item['events'], true) ?? [];
         }
 
         return ['items' => $items, 'total' => $total];

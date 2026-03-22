@@ -77,6 +77,10 @@ final class WebhookCommand
      */
     public function replay(array $args, array $assoc_args): void
     {
+        if (empty($args[0])) {
+            WP_CLI::error('Event name is required.');
+        }
+
         $event = $args[0];
         $payload = json_decode($assoc_args['payload'] ?? '{}', true) ?: [];
 
